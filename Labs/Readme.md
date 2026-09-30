@@ -21,12 +21,15 @@
 ### Тестирование
 
 Корректный ввод:
+
 ![](./Readme.assets/vHU8RH.png)
 
 Ввод не целочисленного числа:
+
 ![](./Readme.assets/tCYYMp.png)
 
 Ввод отрицательного числа:
+
 ![](./Readme.assets/6tpTyx.png)
 
 Ввод числа имеющего меньше 2 знаков не тестируется, условие этого не предполагает.
@@ -47,6 +50,7 @@
 ### Тестирование
 
 Корректный ввод:
+
 ![](./Readme.assets/C52a6B.png)
 
 ![](./Readme.assets/WYpJuh.png)
@@ -54,6 +58,7 @@
 ![](./Readme.assets/Fzjcb8.png)
 
 Ввод не целочисленного числа:
+
 ![](./Readme.assets/hMpvQv.png)
 
 ## Задача 6
@@ -72,11 +77,13 @@
 ### Тестирование
 
 Корректный ввод:
+
 ![](./Readme.assets/oeUZhX.png)
 
 ![](./Readme.assets/LpxXZ2.png)
 
 Ввод нескольких символов:
+
 ![](./Readme.assets/A5gYI9.png)
 
 ## Задача 8
@@ -95,6 +102,7 @@
 ### Тестирование
 
 Корректный ввод:
+
 ![](./Readme.assets/NQttzC.png)
 
 ![](./Readme.assets/l7fCAQ.png)
@@ -103,6 +111,7 @@
 ![](./Readme.assets/HeCilY.png)
 
 Ввод не целочисленного числа:
+
 ![](./Readme.assets/wNYeBp.png)
 
 ## Задача 10
@@ -126,12 +135,15 @@
 ### Тестирование
 
 Корректный ввод:
+
 ![](./Readme.assets/vb16BG.png)
 
 Ввод отрицательного числа:
+
 ![](./Readme.assets/VvRfDO.png)
 
 Ввод не целочисленного числа:
+
 ![](./Readme.assets/MAD29G.png)
 
 # Задание 2
@@ -153,11 +165,13 @@
 ### Тестирование
 
 Корректный ввод:
+
 ![](./Readme.assets/UtoZpT.png)
 
 ![](./Readme.assets/zS2plH.png)
 
 Ввод не целочисленного числа:
+
 ![](./Readme.assets/gq0Rlb.png)
 
 ## Задача 4
@@ -177,13 +191,15 @@
 ### Тестирование
 
 Корректный ввод:
+
 ![](./Readme.assets/Tttvo8.png)
 
 ![](./Readme.assets/mX6x5a.png)
 
 ![](./Readme.assets/z2g0wR.png)
 
-Ввод не целочисленного числа
+Ввод не целочисленного числа:
+
 ![](./Readme.assets/Xls6jr.png)
 
 ## Задача 6
@@ -203,11 +219,13 @@
 ### Тестирование
 
 Корректный ввод:
+
 ![](./Readme.assets/7nBU9a.png)
 
 ![](./Readme.assets/vupsro.png)
 
 Ввод не целочисленного числа:
+
 ![](./Readme.assets/CKA1PR.png)
 
 ## Задача 8
@@ -235,6 +253,7 @@
 ### Тестирование
 
 Корректный ввод:
+
 ![](./Readme.assets/ItpVpf.png)
 
 ![](./Readme.assets/mMiJMS.png)
@@ -242,6 +261,7 @@
 ![](./Readme.assets/FYwWQ0.png)
 
 Ввод отрицательного числа:
+
 ![](./Readme.assets/EyHxkM.png)
 
 Ввод не целочисленного числа:
@@ -267,11 +287,13 @@
 ### Тестирование
 
 Корректный ввод:
+
 ![](./Readme.assets/gTAHbx.png)
 
 ![](./Readme.assets/wTA4LX.png)
 
 Ввод букв разного регистра:
+
 ![](./Readme.assets/GyquU0.png)
 
 # Задание 3
