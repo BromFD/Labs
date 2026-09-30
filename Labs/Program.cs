@@ -25,7 +25,13 @@ class Launcher
 			if (!check1 || !check2)
 			{
 				Console.WriteLine("Введено не число");
-				Console.WriteLine();
+				Console.Write("Продолжить? (y/n default: y): ");
+				continueOption = Console.ReadLine()!;
+				if (continueOption == "n")
+				{
+					break;
+				}
+				Console.Clear();
 				continue;
 			}
 			Console.Clear();

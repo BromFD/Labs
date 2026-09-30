@@ -184,6 +184,7 @@ class TaskManager
 			sum = _lm.LastNumSum(p1Task10A, p1Task10B);
 			Console.WriteLine($"Cумма цифр {p1Task10A} и {p1Task10B} из разряда единиц: {sum}");
 		}
+		Console.WriteLine($"Итого: {sum}");
 	}
 	
 	private void Task12()
@@ -242,6 +243,12 @@ class TaskManager
 		if (!check)
 		{
 			Console.WriteLine("Введено не число");
+			return;
+		}
+
+		if (p2Task8 < 0)
+		{
+			Console.WriteLine("Возраст не может быть отрицательным");
 			return;
 		}
 		Console.WriteLine($"Результат для {p2Task8}: {_lm.Age(p2Task8)}");
@@ -441,7 +448,7 @@ class LabMethods
 
 	public int LastNumSum(int a, int b)
 	{
-		return a % 10 + b % 10;
+		return int.Abs(a % 10) + int.Abs(b % 10);
 	}
 
 	public double SafeDiv(int x, int y)

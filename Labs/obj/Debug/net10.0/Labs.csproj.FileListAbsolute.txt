@@ -12,3 +12,4 @@
 /home/brom/RiderProjects/Labs/Labs/obj/Debug/net10.0/Labs.pdb
 /home/brom/RiderProjects/Labs/Labs/obj/Debug/net10.0/Labs.genruntimeconfig.cache
 /home/brom/RiderProjects/Labs/Labs/obj/Debug/net10.0/ref/Labs.dll
+/home/brom/RiderProjects/Labs/Labs/obj/Debug/net10.0/Labs.sourcelink.json
