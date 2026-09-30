@@ -108,6 +108,7 @@
 ![](./Readme.assets/l7fCAQ.png)
 
 Ввод числа 0:
+
 ![](./Readme.assets/HeCilY.png)
 
 Ввод не целочисленного числа:
@@ -265,6 +266,7 @@
 ![](./Readme.assets/EyHxkM.png)
 
 Ввод не целочисленного числа:
+
 ![](./Readme.assets/yx3laA.png)
 
 ## Задача 10
