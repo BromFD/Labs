@@ -360,16 +360,11 @@ class TaskManager
 			Console.WriteLine("Введено не число");
 			return;
 		}
-		if (p4Task4B < 0)
-		{
-			Console.WriteLine("Метод не поддерживает вставку на отрицательный индекс");
-			return;
-		}
 
 		int[]? result = _lm.Add(p4Task4Arr, p4Task4A, p4Task4B);
 		if (result == null)
 		{
-			Console.WriteLine("Позиция для вставки не может превышать длину списка");
+			Console.WriteLine("Позиция для вставки отрицательна или превышает длину списка");
 			return;
 		}
 		Console.WriteLine($"Получившийся массив с вставленным числом {p4Task4A} на позицию {p4Task4B}: {_ah.ArrayToString(result)}");
@@ -635,9 +630,9 @@ class LabMethods
 		bool isGuessed;
 		int attempts = 1;
 		Random rng = new Random();
+		int pseudorandomNumber = rng.Next(0, 10);
 		do
 		{
-			int pseudorandomNumber = rng.Next(0, 10);
 			Console.Write("Введите число от 0 до 9: ");
 			bool check = int.TryParse(Console.ReadLine()!, out int userNumber);
 			if (!check)
@@ -654,7 +649,7 @@ class LabMethods
 			}
 			else
 			{
-				Console.WriteLine($"Вы не угадали, компьютер загадал число {pseudorandomNumber}");
+				Console.WriteLine($"Вы не угадали");
 				attempts += 1;
 			}
 
@@ -675,7 +670,7 @@ class LabMethods
 
 	public int[]? Add(int[] arr, int x, int pos)
 	{
-		if (pos > arr.Length)
+		if (pos > arr.Length || pos < 0)
 		{
 			return null;
 		}
