@@ -75,7 +75,7 @@ public class Lab2Manager : TaskManager
             Console.Write("Введите рост: ");
             int? height = int.TryParse(Console.ReadLine(), 
                 out var result) ? result : null;
-            if (height == null) { Console.WriteLine("Не удалось " +
+            if (height == null) { Console.WriteLine("Не удалось " + 
                 "присвоить рост"); }
             Name name  = new Name(
                 firstName, 
