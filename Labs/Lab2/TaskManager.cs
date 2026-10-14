@@ -47,11 +47,10 @@ public class Lab2Manager : TaskManager
         string? firstName = Console.ReadLine();
         Console.Write("Введите отчество: ");
         string? patronymic  = Console.ReadLine();
-        Console.Write("Введите рост: ");
-        int? height = int.TryParse(Console.ReadLine(), 
-            out var result) ? result : null;
-        if (height == null) { Console.WriteLine("Не удалось " +
-            "присвоить рост"); }
+        int? height = Scanner.NullableInput<int>(
+            "Введите рост: ", 
+            "Рост должен быть натуральным числом", 
+            Scanner.IsNatural);
         Name name  = new Name(firstName, lastName, patronymic);
         HumanWithName human = new HumanWithName(name, height);
         
@@ -73,10 +72,10 @@ public class Lab2Manager : TaskManager
             Console.Write("Введите отчество: ");
             string? patronymic  = Console.ReadLine();
             Console.Write("Введите рост: ");
-            int? height = int.TryParse(Console.ReadLine(), 
-                out var result) ? result : null;
-            if (height == null) { Console.WriteLine("Не удалось " + 
-                "присвоить рост"); }
+            int? height = Scanner.NullableInput<int>(
+                "Введите рост: ", 
+                "Рост должен быть натуральным числом", 
+                Scanner.IsNatural);
             Name name  = new Name(
                 firstName, 
                 lastName, 
@@ -104,16 +103,13 @@ public class Lab2Manager : TaskManager
         PolygonalLine l1 = new PolygonalLine();
         PolygonalLine l2 = new PolygonalLine();
         
-        Console.Write("Введите количество точек которое " +
-                          "вы хотите добавить в ломаную 1: ");
-        int? n1 = int.TryParse(Console.ReadLine(), 
-            out var result1) ? result1 : null;
-        if (n1 == null)
-        { 
-            Console.WriteLine("Количество точек должно " +
-                            "быть целочисленным числом");
-            return;
-        }
+        int? n1 = Scanner.NullableInput<int>(
+            "Введите количество точек которое " +
+            "вы хотите добавить в ломаную 1: ", 
+            "Количество точек должно быть " +
+            "натуральным числом", 
+            Scanner.IsNatural);
+        if (n1 == null) { return; }
 
         for (int i = 0; i < n1; i++)
         {
@@ -124,16 +120,13 @@ public class Lab2Manager : TaskManager
             l1.Add(p1);
         }
         
-        Console.Write("\nВведите количество точек которое " +
-                          "вы хотите добавить в ломаную 2: ");
-        int? n2 = int.TryParse(Console.ReadLine(), 
-            out var result2) ? result2 : null;
-        if (n2 == null)
-        { 
-            Console.WriteLine("Количество точек должно " +
-                              "быть целочисленным числом");
-            return;
-        }
+        int? n2 = Scanner.NullableInput<int>(
+            "Введите количество точек которое " +
+            "вы хотите добавить в ломаную 1: ", 
+            "Количество точек должно быть " +
+            "натуральным числом", 
+            Scanner.IsNatural);
+        if (n2 == null) { return; }
 
         for (int j = 0; j < n2; j++)
         {
@@ -173,16 +166,13 @@ public class Lab2Manager : TaskManager
         Console.WriteLine(l1);
         
         Console.WriteLine("\nЗаполняем массив точками:");
-        Console.Write("Введите количество точек которое " +
-                      "вы хотите добавить в ломаную: ");
-        int? n1 = int.TryParse(Console.ReadLine(), 
-            out var result1) ? result1 : null;
-        if (n1 == null)
-        { 
-            Console.WriteLine("Количество точек должно " +
-                              "быть целочисленным числом");
-            return;
-        }
+        int? n1 = Scanner.NullableInput<int>(
+            "Введите количество точек которое " +
+            "вы хотите добавить в ломаную: ", 
+            "Количество точек должно быть " +
+            "натуральным числом", 
+            Scanner.IsNatural);
+        if (n1 == null) { return; }
         Point[] points = new Point[n1.Value];
         for (int i = 0; i < n1; i++)
         {
@@ -205,16 +195,13 @@ public class Lab2Manager : TaskManager
     {
         PolygonalLine l1 = new PolygonalLine();
         
-        Console.Write("Введите количество точек которое " +
-                      "вы хотите добавить в ломаную: ");
-        int? n1 = int.TryParse(Console.ReadLine(), 
-            out var result1) ? result1 : null;
-        if (n1 == null)
-        { 
-            Console.WriteLine("Количество точек должно " +
-                              "быть целочисленным числом");
-            return;
-        }
+        int? n1 = Scanner.NullableInput<int>(
+            "Введите количество точек которое " +
+            "вы хотите добавить в ломаную: ", 
+            "Количество точек должно быть " +
+            "натуральным числом", 
+            Scanner.IsNatural);
+        if (n1 == null) { return; }
 
         for (int i = 0; i < n1; i++)
         {
@@ -234,14 +221,11 @@ public class Lab2Manager : TaskManager
         string? cords2 = Console.ReadLine();
         Point p2 = new Point(cords2, " ");
         Console.Write("Введите позицию для вставки: ");
-        int? pos1 =  int.TryParse(Console.ReadLine(),
-            out var result2) ? result2 : null;
-        if (pos1 == null)
-        {
-            Console.WriteLine("Позиция для вставки должна " +
-                              "быть целым числом");
-            return;
-        }
+        int? pos1 = Scanner.NullableInput<int>(
+            "Введите позицию для вставки: ", 
+            "Позиция для вставки должна быть " +
+            "целым числом");
+        if (pos1 == null) { return; }
         l1.Insert(p2, pos1.Value);
         
         Console.WriteLine("\nПолучившаяся ломаная:");
@@ -250,16 +234,13 @@ public class Lab2Manager : TaskManager
         Console.WriteLine("\nДавайте вставим массив точек " +
                           "в ломаную: ");
         Console.WriteLine("Заполняем массив точками:");
-        Console.Write("Введите количество точек которое " +
-                      "вы хотите добавить в ломаную: ");
-        int? n3 = int.TryParse(Console.ReadLine(), 
-            out var result3) ? result3 : null;
-        if (n3 == null)
-        { 
-            Console.WriteLine("Количество точек должно " +
-                              "быть целочисленным числом");
-            return;
-        }
+        int? n3 = Scanner.NullableInput<int>(
+            "Введите количество точек которое " +
+            "вы хотите добавить в ломаную: ", 
+            "Количество точек должно быть " +
+            "натуральным числом", 
+            Scanner.IsNatural);
+        if (n3 == null) { return; }
         Point[] points = new Point[n3.Value];
         for (int j = 0; j < n3; j++)
         {
@@ -269,15 +250,11 @@ public class Lab2Manager : TaskManager
             Point p3 = new Point(cords3, " ");
             points[j] = p3;
         }
-        Console.Write("Введите позицию для вставки: ");
-        int? pos2 =  int.TryParse(Console.ReadLine(),
-            out var result4) ? result4 : null;
-        if (pos2 == null)
-        {
-            Console.WriteLine("Позиция для вставки должна " +
-                              "быть целым числом");
-            return;
-        }
+        int? pos2 = Scanner.NullableInput<int>(
+            "Введите позицию для вставки: ", 
+            "Позиция для вставки должна быть " +
+            "целым числом");
+        if (pos2 == null) { return; }
         l1.InsertMany(points, pos2.Value);
         
         Console.WriteLine("\nПолучившаяся ломаная:");

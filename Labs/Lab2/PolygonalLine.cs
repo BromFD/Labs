@@ -3,6 +3,8 @@ namespace Labs.Lab2;
 public class PolygonalLine
 {
     private Point[]? _points;
+    private double? _length;
+    
     public Point[]? Points
     {
         get { return _points; }
@@ -11,7 +13,6 @@ public class PolygonalLine
             _points = value;
         }
     }
-    private double? _length;
     public double? Length
     {
         get
@@ -21,14 +22,7 @@ public class PolygonalLine
         }
         set { _length = value; }
     }
-
-    public override string ToString()
-    {
-        return $"Ломаная: [ {(_points != null 
-            ? string.Join(", ", _points) : "Пусто")} ] " +
-               $"\nДлина: {(Length != null ? Length : 0)}";
-    }
-
+    
     public PolygonalLine(Point[]? points = null)
     {
         Points = points;
@@ -95,5 +89,12 @@ public class PolygonalLine
         }
 
         return length;
+    }
+    
+    public override string ToString()
+    {
+        return $"Ломаная: [ {(_points != null 
+            ? string.Join(", ", _points) : "Пусто")} ] " +
+               $"\nДлина: {(Length != null ? Length : 0)}";
     }
 }

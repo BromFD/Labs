@@ -23,18 +23,18 @@ public class HumanWithParent : HumanWithName
         }
     }
     
-    public override string ToString()
-    {
-        return base.ToString() +
-               (_parent != null && _parent.Name != null 
-                   ? $"\nРодитель: {_parent.Name}" : "");
-    }
-
     public HumanWithParent(Name? name = null, 
         int? height = null, 
         HumanWithParent? parent = null
         ) : base(name, height)
     {
         Parent = parent;
+    }
+    
+    public override string ToString()
+    {
+        return base.ToString() +
+               (_parent != null && _parent.Name != null 
+                   ? $"\nРодитель: {_parent.Name}" : "");
     }
 }

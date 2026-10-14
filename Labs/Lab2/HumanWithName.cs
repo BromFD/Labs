@@ -3,14 +3,14 @@ namespace Labs.Lab2;
 public class HumanWithName
 {
     private Name? _name;
-
+    private int? _height;
+    
     public Name? Name
     {
         get { return _name; }
         set { _name = value; }
 
     }
-    private int? _height;
     public int? Height
     {
         get { return _height; }
@@ -30,14 +30,6 @@ public class HumanWithName
         }
     }
     
-    public override string ToString()
-    {
-        return $"Человек" +
-               (!_name?.IsEmpty() ?? false 
-                   ? $"\nИмя: {_name}" : "") +
-               (_height != null ? $"\nРост: {_height}" : "");
-    }
-    
     public HumanWithName(
         Name? name = null,
         int? height = null
@@ -45,5 +37,13 @@ public class HumanWithName
     {
         Name = name;
         Height = height;
+    }
+    
+    public override string ToString()
+    {
+        return $"Человек" +
+               (!_name?.IsEmpty() ?? false 
+                   ? $"\nИмя: {_name}" : "") +
+               (_height != null ? $"\nРост: {_height}" : "");
     }
 }

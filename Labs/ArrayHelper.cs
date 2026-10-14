@@ -44,14 +44,14 @@ class ArrayHelper
         return result;
     }
     
-    public T[]? Insert<T>(T[] arr, int index, T item)
+    public T[] Insert<T>(T[] arr, int index, T item)
     {
         T[] result = new T[arr.Length + 1];
         if (index >= result.Length)
         {
             Console.WriteLine("Вставка на индекс превышающий " +
                               "длину списка запрещена");
-            return null;
+            return arr;
         }
         index = index >= 0 ? index : result.Length + index;
         
@@ -64,14 +64,14 @@ class ArrayHelper
         return result;
     }
     
-    public T[]? InsertMany<T>(T[] arr1, int index, T[] arr2)
+    public T[] InsertMany<T>(T[] arr1, int index, T[] arr2)
     {
         T[] result = new T[arr1.Length + arr2.Length];
         if (index > arr1.Length)
         {
             Console.WriteLine("Вставка на индекс превышающий " +
                               "длину списка запрещена");
-            return null;
+            return arr1;
         }
         index = index >= 0 ? index : arr1.Length + 1 + index;
         

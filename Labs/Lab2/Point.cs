@@ -3,26 +3,19 @@ namespace Labs.Lab2;
 public class Point
 {
     private double? _x;
-
+    private double? _y;
+    
     public double? X
     {
         get { return _x; }
         set { _x = value; }
     }
-    private double? _y;
     public double? Y
     {
         get { return _y; }
         set { _y = value; }
     }
-
-    public override string ToString()
-    {
-        return  "( " + (_x == null ? "Неизвестно" : _x.ToString()) + 
-                " : " + 
-                (_y == null ? "Неизвестно" :  _y.ToString()) + " )";
-    }
-
+    
     public Point(
         double? x = null, 
         double? y = null
@@ -52,7 +45,14 @@ public class Point
             Y = null;
             return;
         }
-        X = arrCords?[0];
-        Y = arrCords?[^1];
+        X = arrCords[0];
+        Y = arrCords[^1];
+    }
+    
+    public override string ToString()
+    {
+        return  "( " + (_x == null ? "Неизвестно" : _x.ToString()) + 
+                " : " + 
+                (_y == null ? "Неизвестно" :  _y.ToString()) + " )";
     }
 }
