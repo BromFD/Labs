@@ -18,7 +18,7 @@ public class HumanWithParent : HumanWithName
             {
                 if (Name == null) { Name = new Name(); }
                 Name.Patronymic = value?.Name?.FirstName != null 
-                    ? value?.Name?.FirstName + "ович" : "";
+                    ? value?.Name?.FirstName + "ович" : null;
             };
         }
     }

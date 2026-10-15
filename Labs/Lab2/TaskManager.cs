@@ -71,7 +71,6 @@ public class Lab2Manager : TaskManager
             string? firstName = Console.ReadLine();
             Console.Write("Введите отчество: ");
             string? patronymic  = Console.ReadLine();
-            Console.Write("Введите рост: ");
             int? height = Scanner.NullableInput<int>(
                 "Введите рост: ", 
                 "Рост должен быть натуральным числом", 
@@ -91,8 +90,8 @@ public class Lab2Manager : TaskManager
         Console.WriteLine(ah.ArrayToString(
             humans, "\n"));
         
-        humans[2].Parent = humans[1];
         humans[1].Parent = humans[0];
+        humans[2].Parent = humans[1];
         Console.WriteLine("Обновлённые люди: ");
         Console.WriteLine(ah.ArrayToString(
             humans, "\n"));
@@ -121,8 +120,8 @@ public class Lab2Manager : TaskManager
         }
         
         int? n2 = Scanner.NullableInput<int>(
-            "Введите количество точек которое " +
-            "вы хотите добавить в ломаную 1: ", 
+            "\nВведите количество точек которое " +
+            "вы хотите добавить в ломаную 2: ", 
             "Количество точек должно быть " +
             "натуральным числом", 
             Scanner.IsNatural);
@@ -220,7 +219,6 @@ public class Lab2Manager : TaskManager
                       "через пробел: ");
         string? cords2 = Console.ReadLine();
         Point p2 = new Point(cords2, " ");
-        Console.Write("Введите позицию для вставки: ");
         int? pos1 = Scanner.NullableInput<int>(
             "Введите позицию для вставки: ", 
             "Позиция для вставки должна быть " +
