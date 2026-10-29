@@ -157,8 +157,13 @@ public class Lab3Manager : TaskManager
             );
         Console.WriteLine("Считаем удвоенные нечётные числа...");
         int counter = 0;
-        int[] numbers = FileManager.ReadBinFile<int>(
-            creationPath) ?? [];
+        int[]? numbers = FileManager.ReadBinFile<int>(
+            creationPath);
+        if (numbers == null)
+        {
+            Console.WriteLine("Ошибка чтения файла!");
+            return;
+        }
         foreach (var number in numbers)
         {
             if (number % 4 == 2)
@@ -185,8 +190,13 @@ public class Lab3Manager : TaskManager
             creationPath
         );
         Console.WriteLine("Ищем игрушку с минимальной ценой...");
-        Toy[] toys = FileManager.ReadBinFile<Toy>(
-            creationPath) ?? [];
+        Toy[]? toys = FileManager.ReadBinFile<Toy>(
+            creationPath);
+        if (toys == null)
+        {
+            Console.WriteLine("Ошибка чтения файла!");
+            return;
+        }
         int minPrice = toys[0].Price;
         int minIndex = 0;
         for (int i = 0; i < toys.Length; i++)
@@ -218,8 +228,13 @@ public class Lab3Manager : TaskManager
         );
         Console.WriteLine("Ищем квадрат разности максимального " +
                           "и минимального элементов....");
-        int[] numbers = FileManager.ReadTextFile<int>(
-            creationPath) ?? [];
+        int[]? numbers = FileManager.ReadTextFile<int>(
+            creationPath);
+        if (numbers == null)
+        {
+            Console.WriteLine("Ошибка чтения файла!");
+            return;
+        }
         int min = ArrayHelper.Min(numbers);
         int max = ArrayHelper.Max(numbers);
         Console.WriteLine($"Квадрат разности максимального " +
@@ -244,8 +259,13 @@ public class Lab3Manager : TaskManager
             true
         );
         Console.WriteLine("Ищем cумму нечётных элементов...");
-        int[] numbers = FileManager.ReadTextFile<int>(
-            creationPath, true) ?? [];
+        int[]? numbers = FileManager.ReadTextFile<int>(
+            creationPath, true);
+        if (numbers == null)
+        {
+            Console.WriteLine("Ошибка чтения файла!");
+            return;
+        }
         long sum = 0;
         foreach (var number in numbers)
         {
@@ -279,8 +299,13 @@ public class Lab3Manager : TaskManager
         );
         Console.WriteLine("Считываем файл и заполняем другой " +
                           "файл последними символами строк... ");
-        string[] text = FileManager.ReadTextFile<string>(
-            creationPath1) ?? [];
+        string[]? text = FileManager.ReadTextFile<string>(
+            creationPath1);
+        if (text == null)
+        {
+            Console.WriteLine("Ошибка чтения файла!");
+            return;
+        }
         string[] lastChars = new string[text.Length];
         for (int i = 0; i < lastChars.Length; i++)
         {
@@ -297,8 +322,13 @@ public class Lab3Manager : TaskManager
             Console.WriteLine($"{i + 1}. {text[i]}\n");
         }
         Console.WriteLine("Первые 10 строк нового файла:\n");
-        string[] charsFromFile = FileManager.ReadTextFile<string>(
-            creationPath2) ?? [];
+        string[]? charsFromFile = FileManager.ReadTextFile<string>(
+            creationPath2);
+        if (charsFromFile == null)
+        {
+            Console.WriteLine("Ошибка чтения файла!");
+            return;
+        }
         for (int i = 0; i < 10; i++)
         {
             Console.WriteLine($"{i + 1}. {charsFromFile[i]}\n");
