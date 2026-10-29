@@ -20,7 +20,10 @@ public class PolygonalLine
             Length = GetLength();
             return _length;
         }
-        set { _length = value; }
+        set
+        {
+            _length = value;
+        }
     }
     
     public PolygonalLine(Point[]? points = null)
@@ -30,7 +33,10 @@ public class PolygonalLine
 
     public void Connect(PolygonalLine other)
     {
-        if (other?.Points == null || Points == null) { return; }
+        if (other?.Points == null || Points == null)
+        {
+            return;
+        }
         
         other.Points[0] = Points[0];
         other.Points[^1] = Points[^1];
@@ -38,23 +44,31 @@ public class PolygonalLine
 
     public void Add(Point point)
     {
-        if (Points == null) { Points = []; }
-        ArrayHelper ah = new ArrayHelper();
-        Points = ah.Insert(Points, -1 ,point);
+        if (Points == null)
+        {
+            Points = [];
+        }
+        Points = ArrayHelper.Insert(Points, -1 ,point);
     }
     
     public void Insert(Point point, int index)
     {
-        if (Points == null) { Points = []; }
-        ArrayHelper ah = new ArrayHelper();
-        Points = ah.Insert(Points, index ,point);
+        if (Points == null)
+        {
+            Points = [];
+        }
+        ArrayHelper ArrayHelper = new ArrayHelper();
+        Points = ArrayHelper.Insert(Points, index ,point);
     }
 
     public void InsertMany(Point[] points, int index)
     {
-        if (Points == null) { Points = []; }
-        ArrayHelper ah = new ArrayHelper();
-        Points = ah.InsertMany(Points, index, points);
+        if (Points == null)
+        {
+            Points = [];
+        }
+        ArrayHelper ArrayHelper = new ArrayHelper();
+        Points = ArrayHelper.InsertMany(Points, index, points);
     }
     
     private double? GetLength()

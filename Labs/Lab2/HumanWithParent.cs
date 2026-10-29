@@ -11,12 +11,18 @@ public class HumanWithParent : HumanWithName
             _parent = value;
             if (Name?.LastName == null)
             {
-                if (Name == null) { Name = new Name(); }
+                if (Name == null)
+                {
+                    Name = new Name();
+                }
                 Name.LastName = value?.Name?.LastName;
             };
             if (Name?.Patronymic == null)
             {
-                if (Name == null) { Name = new Name(); }
+                if (Name == null)
+                {
+                    Name = new Name();
+                }
                 Name.Patronymic = value?.Name?.FirstName != null 
                     ? value?.Name?.FirstName + "ович" : null;
             };

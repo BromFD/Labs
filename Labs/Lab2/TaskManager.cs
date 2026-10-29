@@ -20,10 +20,15 @@ public class Lab2Manager : TaskManager
     public override void Call(int part, int task)
     {
         string taskNumber = part.ToString() + task.ToString();
-        if (_tasks.TryGetValue(taskNumber, out Action? action)) 
-        { action(); }
-        else { Console.WriteLine($"Такой задачи " +
-                                 $"нет в менеджере"); }
+        if (_tasks.TryGetValue(taskNumber, out Action? action))
+        {
+            action();
+        }
+        else 
+        { 
+            Console.WriteLine($"Такой задачи " +
+                                 $"нет в менеджере"); 
+        }
     }
 
     public void Task13()
@@ -60,7 +65,6 @@ public class Lab2Manager : TaskManager
     public void Task23()
     {
         HumanWithParent[] humans = new HumanWithParent[3];
-        ArrayHelper ah = new ArrayHelper();
         for (int i = 0; i < humans.Length; i++)
         {
             Console.WriteLine($"Введите данные человека " +
@@ -87,13 +91,13 @@ public class Lab2Manager : TaskManager
             humans[i] = human;
         }
         Console.WriteLine("Введённые люди: ");
-        Console.WriteLine(ah.ArrayToString(
+        Console.WriteLine(ArrayHelper.ArrayToString(
             humans, "\n"));
         
         humans[1].Parent = humans[0];
         humans[2].Parent = humans[1];
         Console.WriteLine("Обновлённые люди: ");
-        Console.WriteLine(ah.ArrayToString(
+        Console.WriteLine(ArrayHelper.ArrayToString(
             humans, "\n"));
     }
     
@@ -108,7 +112,10 @@ public class Lab2Manager : TaskManager
             "Количество точек должно быть " +
             "натуральным числом", 
             Scanner.IsNatural);
-        if (n1 == null) { return; }
+        if (n1 == null)
+        {
+            return;
+        }
 
         for (int i = 0; i < n1; i++)
         {
@@ -125,7 +132,10 @@ public class Lab2Manager : TaskManager
             "Количество точек должно быть " +
             "натуральным числом", 
             Scanner.IsNatural);
-        if (n2 == null) { return; }
+        if (n2 == null)
+        {
+            return;
+        }
 
         for (int j = 0; j < n2; j++)
         {
@@ -171,7 +181,10 @@ public class Lab2Manager : TaskManager
             "Количество точек должно быть " +
             "натуральным числом", 
             Scanner.IsNatural);
-        if (n1 == null) { return; }
+        if (n1 == null)
+        {
+            return;
+        }
         Point[] points = new Point[n1.Value];
         for (int i = 0; i < n1; i++)
         {
@@ -200,7 +213,10 @@ public class Lab2Manager : TaskManager
             "Количество точек должно быть " +
             "натуральным числом", 
             Scanner.IsNatural);
-        if (n1 == null) { return; }
+        if (n1 == null)
+        {
+            return;
+        }
 
         for (int i = 0; i < n1; i++)
         {
@@ -223,7 +239,10 @@ public class Lab2Manager : TaskManager
             "Введите позицию для вставки: ", 
             "Позиция для вставки должна быть " +
             "целым числом");
-        if (pos1 == null) { return; }
+        if (pos1 == null)
+        {
+            return;
+        }
         l1.Insert(p2, pos1.Value);
         
         Console.WriteLine("\nПолучившаяся ломаная:");
@@ -238,7 +257,10 @@ public class Lab2Manager : TaskManager
             "Количество точек должно быть " +
             "натуральным числом", 
             Scanner.IsNatural);
-        if (n3 == null) { return; }
+        if (n3 == null)
+        {
+            return;
+        }
         Point[] points = new Point[n3.Value];
         for (int j = 0; j < n3; j++)
         {
@@ -252,7 +274,10 @@ public class Lab2Manager : TaskManager
             "Введите позицию для вставки: ", 
             "Позиция для вставки должна быть " +
             "целым числом");
-        if (pos2 == null) { return; }
+        if (pos2 == null)
+        {
+            return;
+        }
         l1.InsertMany(points, pos2.Value);
         
         Console.WriteLine("\nПолучившаяся ломаная:");

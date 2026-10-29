@@ -3,7 +3,6 @@ namespace Labs.Lab1;
 class Lab1Manager : TaskManager
 {
 	private readonly Lab1Methods _lm = new Lab1Methods();
-	private readonly ArrayHelper _ah = new ArrayHelper();
 
 	public string Rts(
 		bool condition, 
@@ -377,7 +376,7 @@ class Lab1Manager : TaskManager
 	{
 		Console.Write("Введите массив чисел " +
 		              "через пробел для задания 2: ");
-		int[]? p4Task2Arr = _ah.Split<int>(
+		int[]? p4Task2Arr = ArrayHelper.Split<int>(
 			Console.ReadLine()!, " ");
 		if (p4Task2Arr == null)
 		{
@@ -401,7 +400,7 @@ class Lab1Manager : TaskManager
 	{
 		Console.Write("Введите массив чисел " +
 		              "через пробел для задания 4: ");
-		int[]? p4Task4Arr = _ah.Split<int>(
+		int[]? p4Task4Arr = ArrayHelper.Split<int>(
 			Console.ReadLine()!, " ");
 		if (p4Task4Arr == null)
 		{
@@ -434,14 +433,14 @@ class Lab1Manager : TaskManager
 		Console.WriteLine($"Получившийся массив с " +
 		                  $"вставленным числом {p4Task4A} " +
 		                  $"на позицию {p4Task4B}: " +
-		                  $"{_ah.ArrayToString(result, " ")}");
+		                  $"{ArrayHelper.ArrayToString(result, " ")}");
 	}
 	
 	private void Task36()
 	{
 		Console.Write("Введите массив чисел" +
 		              " через пробел для задания 6: ");
-		int[]? p4Task6Arr = _ah.Split<int>(
+		int[]? p4Task6Arr = ArrayHelper.Split<int>(
 			Console.ReadLine()!, " ");
 		if (p4Task6Arr == null)
 		{
@@ -451,7 +450,7 @@ class Lab1Manager : TaskManager
 		_lm.Reverse(p4Task6Arr);
 		Console.WriteLine($"Получившийся " +
 		                  $"перевёрнутый массив: " +
-		                  $"{_ah.ArrayToString(p4Task6Arr, " ")}");
+		                  $"{ArrayHelper.ArrayToString(p4Task6Arr, " ")}");
 	}
 	
 	private void Task38()
@@ -459,10 +458,10 @@ class Lab1Manager : TaskManager
 		Console.Write("Введите первый массив " +
 		              "чисел через пробел " +
 		              "для задания 8: ");
-		int[]? p4Task8ArrA = _ah.Split<int>(
+		int[]? p4Task8ArrA = ArrayHelper.Split<int>(
 			Console.ReadLine()!, " ");
 		Console.Write("Введите второй массив чисел через пробел для задания 8: ");
-		int[]? p4Task8ArrB = _ah.Split<int>(
+		int[]? p4Task8ArrB = ArrayHelper.Split<int>(
 			Console.ReadLine()!, " ");
 		if (p4Task8ArrA == null || p4Task8ArrB == null)
 		{
@@ -470,7 +469,7 @@ class Lab1Manager : TaskManager
 			return;
 		}
 		Console.WriteLine($"Получившийся объединённый массив: " +
-		                  $"{_ah.ArrayToString(
+		                  $"{ArrayHelper.ArrayToString(
 			                  _lm.Concat(p4Task8ArrA, p4Task8ArrB), " ")}");
 	}
 	
@@ -478,7 +477,7 @@ class Lab1Manager : TaskManager
 	{
 		Console.Write("Введите массив чисел " +
 		              "через пробел для задания 10: ");
-		int[]? p4Task10Arr = _ah.Split<int>(
+		int[]? p4Task10Arr = ArrayHelper.Split<int>(
 			Console.ReadLine()!, " ");
 		if (p4Task10Arr == null)
 		{
@@ -487,7 +486,7 @@ class Lab1Manager : TaskManager
 		}
 		Console.WriteLine($"Получившийся массив без " +
 		                  $"отрицательных элементов: {
-			                  _ah.ArrayToString(
+			                  ArrayHelper.ArrayToString(
 				                  _lm.DeleteNegative(p4Task10Arr), " ")}");
 	}
 }

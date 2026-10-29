@@ -8,7 +8,10 @@ public class HumanWithName
     public Name? Name
     {
         get { return _name; }
-        set { _name = value; }
+        set
+        {
+            _name = value;
+        }
 
     }
     public int? Height
@@ -21,7 +24,12 @@ public class HumanWithName
                 _height = null;
                 return;
             }
-            if (value > 0) { _height = value; }
+
+            if (value > 0)
+            {
+                _height = value;   
+            }
+            
             else
             {
                 _height = null;

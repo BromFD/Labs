@@ -9,20 +9,29 @@ public class Name
     public string? FirstName
     {
         get { return _firstName; }
-        set { _firstName = !string.IsNullOrEmpty(value) 
-            ? value : null; }
+        set 
+        { 
+            _firstName = !string.IsNullOrEmpty(value) 
+            ? value : null; 
+        }
     }
     public string? LastName
     {
         get { return _lastName; }
-        set { _lastName = !string.IsNullOrEmpty(value) 
-            ? value : null; }
+        set
+        { 
+            _lastName = !string.IsNullOrEmpty(value) 
+            ? value : null; 
+        }
     }
     public string? Patronymic
     {
         get { return _patronymic; }
-        set { _patronymic = !string.IsNullOrEmpty(value) 
-            ? value : null; }
+        set 
+        { 
+            _patronymic = !string.IsNullOrEmpty(value) 
+            ? value : null; 
+        }
     }
     
     public Name(

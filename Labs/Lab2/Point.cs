@@ -8,17 +8,23 @@ public class Point
     public double? X
     {
         get { return _x; }
-        set { _x = value; }
+        set
+        {
+            _x = value;
+        }
     }
     public double? Y
     {
         get { return _y; }
-        set { _y = value; }
+        set
+        {
+            _y = value;
+        }
     }
     
     public Point(
-        double? x = null, 
-        double? y = null
+        double? x, 
+        double? y
         )
     {
         X = x;
@@ -31,18 +37,17 @@ public class Point
         {
             Console.WriteLine("Не удалось " +
                               "создать точку из строки");
-            X = null;
-            Y = null;
+            X = 0;
+            Y = 0;
             return;
         }
-        ArrayHelper ah = new ArrayHelper();
-        double[]? arrCords = ah.Split<double>(cords, separator);
+        double[]? arrCords = ArrayHelper.Split<double>(cords, separator);
         if (arrCords == null || arrCords.Length != 2)
         { 
             Console.WriteLine("Не удалось " +
                               "создать точку из строки");
-            X = null;
-            Y = null;
+            X = 0;
+            Y = 0;
             return;
         }
         X = arrCords[0];

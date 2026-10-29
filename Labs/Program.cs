@@ -1,7 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Diagnostics;
+using System.Text;
 using Labs.Lab1;
 using Labs.Lab2;
+using Labs.Lab3;
 namespace Labs;
 
 class Launcher
@@ -20,6 +23,7 @@ class Launcher
 		menu.Run();
 		*/
 		
+		/*
 		Menu menu = new Menu(
 			greeting: "===================================================================\n" +
 			          "|                  Лабораторная работа номер 2                    |\n" +
@@ -27,6 +31,16 @@ class Launcher
 			          "| Введите номер задания и номер задачи.                           |\n" +
 			          "===================================================================",
 			taskManager: new Lab2Manager()
+		);
+		menu.Run();
+		*/
+		Menu menu = new Menu(
+			greeting: "===================================================================\n" +
+			          "|                  Лабораторная работа номер 3                    |\n" +
+			          "===================================================================\n" +
+			          "| Введите номер задания и номер задачи.                           |\n" +
+			          "===================================================================",
+			taskManager: new Lab3Manager()
 		);
 		menu.Run();
 	}
